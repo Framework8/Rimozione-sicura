@@ -14,7 +14,7 @@ Questo progetto consiste in un sistema per eliminare in modo sicuro file su supp
 - Python3 installato sul sistema  
 - Librerie `cryptography` e `colorama` indicate nel file `requirements.txt`  
 - g++ per compilare le parti in c++ in modo adatto per la propria macchia
-- ⚠️ Il sistema di gestione dei percorsi nei file Python è pensato per filesystem Unix/Linux/macOS
+- ⚠️ Il sistema di gestione dei percorsi nei file Python è pensato per <u>***filesystem Unix/Linux/macOS***</u>
 
 ## Installazione e utilizzo
 
