@@ -2,7 +2,7 @@
 
 Questo progetto consiste in un sistema per eliminare in modo sicuro file su supporti di tipo HDD e SSD.
 
-## Funzionalità princioali
+## Funzionalità principali
 
 - selezione dei file tramite input da utente  
 - spostamento dei file selezionati in una cartella temporanea grazie a `shutil.move()`  
