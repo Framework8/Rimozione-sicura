@@ -44,6 +44,7 @@ def critta_file(filepath):
         # Leggi il contenuto originale
         with open(filepath, 'rb') as file:
             original_data = file.read()
+            
         #generazione chiave diversa ogni volta
         f=Fernet(chiave())
 
