@@ -61,17 +61,18 @@ def critta_file(filepath):
 
 def new_path_file(file):
     if not os.path.exists("./temporanea"):
-        os.system("mkdir temporanea")
+        os.mkdir("temporanea")
     shutil.move(file, "./temporanea/")
     documento=os.path.basename(file)
     os.rename(f"./temporanea/{documento}", "./temporanea/file.txt")
 
 def new_path_cartella(cartella):
     if not os.path.exists("./temporanea"):
-        os.system("mkdir temporanea")
+        os.mkdir("temporanea")
     for file in os.listdir(cartella):
-        shutil.move(file, "./temporanea")
+        percorso_e_nome=os.path.join(cartella, file)
         documento=os.path.basename(file)
+        shutil.move(percorso_e_nome, "./temporanea")
         numero=random.randint(1, 10000)
         os.rename(f"./temporanea/{documento}", f"./temporanea/file{numero}.txt")
     
