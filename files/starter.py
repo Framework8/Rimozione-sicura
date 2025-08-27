@@ -13,12 +13,13 @@ def menu():
     print("1. Eliminare in modo sicuro un file")
     print("2. Eliminare in modo sicuro una cartella di file")
     print("3. Pulisci schermo")
-    print("4. Esci")
+    print("4. Elimina la cartella temporanea (se presente)")
+    print("5. Esci")
     
     
     while True:
-        scelta = input("Scegli un'opzione (1-4): ")
-        if scelta in ['1', '2', '3', '4']:
+        scelta = input("Scegli un'opzione (1-5): ")
+        if scelta in ['1', '2', '3', '4', '5']:
             return scelta
         os.system("clear")
         print("Scelta non valida. Riprova.\n")
@@ -26,7 +27,8 @@ def menu():
         print("1. Eliminare in modo sicuro un file")
         print("2. Eliminare in modo sicuro una cartella di file")
         print("3. Pulisci schermo")
-        print("4. Esci")
+        print("4. Elimina la cartella temporanea (se presente)")
+        print("5. Esci")
 
 
 def chiave():
@@ -77,6 +79,11 @@ def new_path_cartella(cartella):
         numero=random.randint(1, 10000)
         os.rename(f"./temporanea/{documento}", f"./temporanea/file{numero}.txt")
     
+def elimina_temporanea():
+    if os.path.exists("./temporanea"):
+        shutil.rmtree("./temporanea")
+    else:
+        print("\nLa cartella non esiste o è già stata eliminata\n")
 
 if __name__ == "__main__":
     while True:
@@ -102,6 +109,9 @@ if __name__ == "__main__":
                 os.system("./elimina_cartella")
         elif scelta=='3':
             os.system("clear")
+        elif scelta=='4':
+            os.system("clear")
+            elimina_temporanea()
         else:
             print("Uscito")
             break
