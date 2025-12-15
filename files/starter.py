@@ -93,6 +93,7 @@ if __name__ == "__main__":
             file=str(input("Inserisci il percorso del file:\t"))
             if not os.path.exists(file):
                 print(Fore.RED + "Il percorso non esiste. Riprova" + Style.RESET_ALL)
+                print(Fore.LIGHTYELLOW_EX)
             else:
                 critta_file(file)
                 new_path_file(file)
@@ -103,6 +104,7 @@ if __name__ == "__main__":
             cartella=str(input("Inserisci il percorso della cartella:\t"))
             if not os.path.exists(cartella):
                 print(Fore.RED + "Il percorso non esiste. Riprova" + Style.RESET_ALL)
+                print(Fore.LIGHTYELLOW_EX)
             else:
                 critta_cartella(cartella)
                 new_path_cartella(cartella)
